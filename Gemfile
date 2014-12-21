@@ -53,5 +53,6 @@ gem 'spring',        group: :development
 gem 'figaro', '1.0'
 gem 'redcarpet'
 gem 'carrierwave'
+gem 'cloudinary'
 gem 'mini_magick'
 gem 'fog'
