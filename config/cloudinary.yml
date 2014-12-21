@@ -1,0 +1,18 @@
+development:
+  cloud_name: hmmcuxfgg
+  api_key: '258881817473477'
+  api_secret: gZe2hvHMdkbhgmbXmxmskXvwHMg
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hmmcuxfgg
+  api_key: '258881817473477'
+  api_secret: gZe2hvHMdkbhgmbXmxmskXvwHMg
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hmmcuxfgg
+  api_key: '258881817473477'
+  api_secret: gZe2hvHMdkbhgmbXmxmskXvwHMg
+  enhance_image_tag: true
+  static_image_support: false
