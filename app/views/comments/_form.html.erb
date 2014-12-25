@@ -1,0 +1,18 @@
+<%= form_for [topic, post, @comment] do |f| %>
+ <div class="form-group">
+   <div class="row">
+     <div class="col-md-8">
+       <h1> Add a comment: </h1>
+       <%= f.label :Body%>
+       <%= f.text_field :body, class: 'form-control', placeholder: "Add a comment" %>
+     </div>  
+   </div>
+ </div>
+
+  <div class="form-group">
+    <% if policy(@comment).create? %>
+     <%= f.submit "Create Comment", class: 'btn btn-success' %>
+    <% end %>
+  </div>
+
+<% end %>
