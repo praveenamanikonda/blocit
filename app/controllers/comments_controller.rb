@@ -8,13 +8,17 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(comment_params)
     @comment.post = @post
     authorize @comment 
+    @new_comment = Comment.new 
     
     if @comment.save
-      redirect_to [@topic, @post] , notice: "Comment saved successfully"
+      flash[:notice] = "Comment was created"
     else 
-      flash[:error] = "Comment failed. Please try again."
-      redirect_to [@topic, @post]
-    end   
+      flash[:error] = "There was an error saving comment. Please try again."
+    end 
+    
+   respond_with(@comment) do |format|
+      format.html { redirect_to [@post.topic, @post] }
+    end    
   end
   
   def destroy 
